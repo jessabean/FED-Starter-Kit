@@ -1,0 +1,61 @@
+#Front-End Formulation
+
+##Overview
+
+Forked from Blake Walters - https://github.com/markupboy/front-end-formulation
+
+##Getting Started
+
+Update the .rvmc to the correct ruby version and gemset name.
+
+Run <code>gem install bundle</code> then <code>bundle install</code> to install all necessary gems.
+
+Run <code>guard</code> to begin watching the directory for changes to files handled by compass or sprockets.
+
+## Project Notes (Template)
+
+### Authors
+
+- Authors: 
+	- [Fake Jones](mailto:fake.jones@viget.com) - Rails dev
+	- [Doug Avery](mailto:doug.avery@viget.com) - FED
+	- [Jimberly Jams](mailto:fake.jams@viget.com) - Designer
+
+### Development
+
+- Code standards:
+	- Hard tabs in HTML, CSS, JS
+	- <code>/* @group Group Name */ ... /* @end */</code> for CSS/JS organization
+	- Single quotes wherever possible
+	- <code>var_name, methodName, methodCall(argument), ClassName</code>
+
+- External services:
+	- [clientname].shopify.com - uses CSS from production
+	- twitterfeed.com - pulls from /twitter-rss/ [login info]
+
+### Source
+
+- Version control: 
+	- git@viget.unfuddle.com:viget/[clientname].git
+	- master branch: deployable code
+	- [branchname] branch: features for [featurename]
+
+- Wireframes: 
+	- /Clients/[clientname]/Project/UX/Wireframes
+
+- Comps: 
+	- /Clients/[clientname]/Project/Design/Round1
+	- /Clients/[clientname]/Project/Design/Round2
+
+- Build PSDs: 
+	- git.lab.viget.com:/srv/git/[clientname]_build.git
+
+### Deployment
+
+- Staging: [servername] 
+	- Method: ssh to server, git pull
+	- Auth: [where to find login, pass]
+
+- Production: [servername] 
+	- Method: ssh to server, git pull
+	- Auth: [where to find login, pass]

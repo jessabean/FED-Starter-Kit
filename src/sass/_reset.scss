@@ -1,0 +1,124 @@
+/* @group reset */
+
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, figure, footer, header, 
+	hgroup, menu, nav, section, menu,
+	time, mark, audio, video {
+		margin:0;
+		padding:0;
+		border:0;
+		outline:0;
+		font-size:100%;
+		vertical-align:baseline;
+		background:transparent;
+	}									 
+
+	article, aside, figure, footer, header, 
+	hgroup, nav, section { display:block; }
+
+	ol, ul { list-style:none; }
+
+	blockquote, q { quotes:none; }
+
+	blockquote:before, blockquote:after,
+	q:before, q:after { content:''; content:none; }
+
+	a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+	table { border-collapse:collapse; border-spacing:0; }
+
+	hr { display:block; height:1px; border:0;	border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+	input, select { vertical-align:middle; }
+
+	// fonts.css from the YUI Library: http://developer.yahoo.com/yui/
+	// refer to http://developer.yahoo.com/yui/fonts/ for font sizing 
+	table { font-size:inherit; font-size: 100%; }
+
+	select, input, textarea { font-size: 99%; }
+
+	pre, code { font:115% monospace; *font-size:100%; }
+	
+	sub { font-size: smaller; vertical-align: sub; }
+
+	// always force a scrollbar in non-IE 
+	html { overflow-y: scroll; }
+
+	// make buttons play nice in IE:		
+	// http://www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ 
+	button {	width: auto; overflow: visible; }
+
+	// bicubic resizing for non-native sized IMG: 
+	// http://code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ 
+	.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* @end */
+
+/* @group special resets */
+
+	// These selection declarations have to be separate.
+	::-moz-selection{ 
+		background: rgba(90,200,230,.8); 
+		color:#fff; 
+		text-shadow: 0 -1px 0 rgba(0,130,200,.5); 
+	}
+
+	::selection { 
+		background: rgba(0,120,176,.8); 
+		color:#fff; 
+		text-shadow: 0 -1px 0 rgba(0,100,156,.9);
+	} 
+
+	// http://j.mp/webkit-tap-highlight-color 
+	a:link { 
+		-webkit-tap-highlight-color: rgba(0,120,176,.8);
+	}
+
+/* @end */
+
+/* @group base styles */
+
+	a {
+		text-decoration: none;
+	}
+	
+	a, 
+	a:active, 
+	a:visited,
+	a:hover { 
+		cursor: pointer;
+	}
+	
+	strong, 
+	th { 
+		font-weight: bold; 
+	}
+	
+	td, td img { vertical-align:top; } 
+
+/* @end */
+
+/* @group headers */
+
+	// http://www.aestheticallyloyal.com/public/optimize-legibility/  
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 { 
+		font-weight: bold; 
+		text-rendering: optimizeLegibility; 
+		margin-bottom: .5em;
+	}
+
+/* @end */
+

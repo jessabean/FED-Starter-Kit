@@ -1,0 +1,27 @@
+/* @group colors */
+
+	$black: #3e3e3e;
+	$blue: #0195c2;
+	$yellow: #fde8b7;
+	$red: #95001a;
+	$pink: #fea5a7;
+
+	$text: $black;
+	$text-light: $black - 20;
+
+	$link: $blue;
+	$link-hover: $blue + 20;
+	$link-visited: $blue - 20;
+
+	$head-link: $blue;
+	$head-link-hover: $link-hover;
+
+	$notice: $text;
+	$notice-frame: $yellow;
+	$error: $red;
+	$error-frame: $pink;
+
+	$highlight: opacify($blue, 0.8);
+
+/* @end */
+
