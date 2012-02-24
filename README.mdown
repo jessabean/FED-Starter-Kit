@@ -6,9 +6,14 @@ Forked from Blake Walters - https://github.com/markupboy/front-end-formulation
 
 ##Getting Started
 
-Update the .rvmc to the correct ruby version and gemset name.
+Update the .rvmrc to the correct ruby version and gemset name.
 
-Run <code>gem install bundle</code> then <code>bundle install</code> to install all necessary gems.
+To install all gems properly, run:
+
+- gem install bundle
+- bundle install
+- juicer install yui_compressor
+- juicer install jslint
 
 Run <code>guard</code> to begin watching the directory for changes to files handled by compass or sprockets.
 

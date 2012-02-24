@@ -1,10 +1,4 @@
-require 'growl_notify'
-
-GrowlNotify.config do |config|
-  config.notifications = ["Compass Application"]
-  config.default_notifications = ["Compass Application"] 
-  config.application_name = "My Application"
-end
+require 'compass-growl'
 
 http_path = '/'
 css_dir = 'public/assets/stylesheets'
@@ -16,7 +10,7 @@ relative_assets = true
 line_comments = false
 
 def is_32bit?(filename)
-  filename.match(/transparent/)
+  filename.match(/^png(24|32)/)
 end
 
 def compress_png(filename)
@@ -30,6 +24,14 @@ def optimize_further(image_app, filename)
   system 'open -a Image' << image_app << '.app ' << filename
 end
 
+def growl(msg)
+  GNTP.notify({
+    :title    => "Compass",
+    :text     => msg,
+    :icon     => "file://#{CompassGrowl::ICON}"
+  })
+end
+
 on_sprite_saved do |filename|
   unless is_32bit?(filename)
     compress_png filename
@@ -37,5 +39,5 @@ on_sprite_saved do |filename|
   else 
     optimize_further 'Alpha', filename
   end
-  GrowlNotify.moderate(:title => 'Your sprite is done: ', :description => filename)
+  growl('Sprite: ' + filename + ' complete')
 end

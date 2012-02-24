@@ -1,16 +1,14 @@
+// sass
 @import "compass/css3";
+@import "mixins";
 @import "sprites";
 
 // core
 @import "reset";
-@import "type";
-@import "vars";
 @import "base";
-
-// assets
-@import "forms";
-@import "content";
+@import "structure";
 
 // specifics
 @import "modules";
+@import "content";
 @import "pages";

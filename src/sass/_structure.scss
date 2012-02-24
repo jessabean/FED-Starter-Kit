@@ -1,0 +1,140 @@
+/* @group utility classes */
+
+	// for image replacement 
+	.ir { 
+		display: block; 
+		text-indent: -9999px; 
+		overflow: hidden; 
+		background-repeat: none; 
+	}
+
+	// for js-less browsers
+	.no-js .noscript {
+		display: block;
+	}
+
+	// Hide for both screenreaders and browsers 
+	.hidden { 
+		display: none; 
+		visibility: hidden; 
+	} 
+
+	// Hide only visually, but have it available for screenreaders 
+	// http://www.webaim.org/techniques/css/invisiblecontent/ 
+	.skipnav,
+	.visuallyhidden, 
+	.printonly { 
+		position: absolute; 
+		left: -10000px; 
+		top: auto; 
+		width: 1px; 
+		height: 1px; 
+		overflow: hidden; 
+	}
+
+	.skipnav:focus {  
+		background: #fff;
+		color: $link;
+		font-weight: bold;
+		height: 20px;
+		padding: 10px;
+		left: 0px;
+		width: auto;
+		z-index: 10000;
+	}
+
+	.invisible { 
+		visibility: hidden; 
+	}
+
+	.right { 
+		float: right; 
+	}
+
+	.left { 
+		float: left; 
+	}
+
+	.unstyled-list,
+	.unstyled-list li {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+
+/* @end */
+
+/* @group clearfix */
+
+	.formfield:after,
+	.clearfix:after {
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden; 
+	}
+	
+	.lte7 .formfield {
+		overflow: hidden;
+	}
+
+	.lte7 .clearfix {
+		height: 1%;
+	}  
+	
+	.lte7 li,
+	.lte7 div {
+		zoom: 1;
+	}
+
+/* @end */
+
+/* @group links and colors */
+
+	a, 
+	select, 
+	input, 
+	textarea,
+	body { 
+		color: $text;
+	}
+
+	a {
+		color: $link;
+		text-decoration: none;
+	}
+
+	a:visited {
+		color: $link - 20;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+/* @end */
+
+/* @group highlights & selectons */
+
+	// These selection declarations have to be separate.
+	::-moz-selection { 
+		background: $highlight; 
+		color: #fff; 
+		text-shadow: $highlight - 20; 
+	}
+
+	::selection { 
+		background: $highlight; 
+		color: #fff; 
+		text-shadow: 0 -1px 0 $highlight;
+	} 
+
+	// http://j.mp/webkit-tap-highlight-color 
+	a:link { 
+		-webkit-tap-highlight-color: $highlight;
+	}
+
+/* @end */
+
